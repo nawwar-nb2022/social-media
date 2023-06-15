@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// root color
+  $mainBackgroundColor-Contain :rgba($color : #F0F2F5 , $alpha: .8) ;
+  $mainBackgroundColor-Contain-Wrapper : white;
+  $mainTextColor-container : #313232;
+  $iconColor : #1877f2;
+  
+  $mainBackgroundColor-Contain-dark : #18191A;
+  $mainBackgroundColor-Contain-Wrapper-dark : #242526;
+  $iconColor-dark : #4292FF;
+
+
+svg{
+  color : $iconColor;
+  cursor: pointer;
+}
+.dark svg{
+  color : $iconColor-dark!important;
+}
+// responsive option
+@mixin tablet {
+  @media only screen and (max-width : 800px) {
+    @content
+  }
+};
+@mixin mobile {
+  @media only screen and (max-width : 500px) {
+    @content
+  }
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{  
+    background-color: inherit;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #333;
+    border-radius: 10px;
+}
+.App{
+  transition: 2s all ease-out;
+}

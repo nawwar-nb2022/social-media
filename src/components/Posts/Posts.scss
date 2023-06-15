@@ -1,0 +1,81 @@
+@import "../../index.scss";
+.postSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // border: 1px solid black;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+    background-color: $mainBackgroundColor-Contain-Wrapper;
+    padding: 10px 0;
+    box-shadow: 0px 0px 5px gray;
+    @include tablet{
+        width: 90%;
+    }
+    
+    .topPostSection{
+        width: 96%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .personalInfo{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img{
+                width: 48px;
+                height: 48px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            span{
+                font-weight: 500;
+                font-size: 1.2rem;
+            }
+
+        }
+        svg{
+            color: #333;
+        }
+    }
+    .PostContent{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        width: 100%;
+        .PostText{
+            color:$mainTextColor-container;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 500;
+            line-height: 15px;
+            padding: 0 10px;
+        }
+        .postImage{
+            width: 100%;
+            img{
+                width: 100%;
+                object-fit: cover;
+                // border-radius:5px;
+            }
+        }
+
+    }
+    .EffectSection{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        .likes , .shares{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            .effectAction{
+                background-color: inherit;
+                border:none;
+                outline:none;
+            }
+        }
+    }
+}

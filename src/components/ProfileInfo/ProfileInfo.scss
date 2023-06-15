@@ -1,0 +1,47 @@
+@import "../../index.scss";
+.profileInfo{
+    width: 90%;
+    margin-top: 10px;
+    .cover{
+        width: 100%;
+        position: relative;
+        margin-bottom: 64px;
+        .coverPicture{
+            img{
+                width: 100%!important;
+                max-height: 300px;
+                object-fit: cover;
+                border-radius:10px;
+            }
+        }
+        .personalImage{
+            position: absolute;
+            width: 128px;
+            height: 128px;
+            bottom: -20%;
+            left: calc(50% - 64px);
+            img{
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+    }
+    .information{
+        .userName{
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+        .desc{
+            font-weight: 300;
+            opacity: .8;
+            width: 60%;
+            @include  tablet {
+                width: 80%;
+            }
+            @include mobile{
+                width: 100%;
+            }
+        }
+    }
+}

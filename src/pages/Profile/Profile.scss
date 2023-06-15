@@ -1,0 +1,97 @@
+@import "../../index.scss";
+.dark{
+    .ProfilePage{
+        background-color: $mainBackgroundColor-Contain-dark;
+    }
+    .postSection{
+        background-color:  $mainBackgroundColor-Contain-Wrapper-dark;
+    }
+    .PostText{
+        color:  $mainBackgroundColor-Contain!important;
+    }
+}
+.ProfilePage{
+    display: flex;
+    background-color: $mainBackgroundColor-Contain;
+    .SideBar{
+        flex: 2;
+    }
+    .informationSection{
+        flex : 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+        .BodySection{
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 20px;
+
+            .PostContainer{
+                flex: 8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .follow{
+                flex: 4;
+                @include tablet{
+                    flex: 2;
+                }
+                @include mobile{
+                    display: none;
+                }
+                .following , .followers{
+                    h1{
+                        padding-bottom:20px;
+                        @include tablet{
+                            font-size: 1rem;
+                        }
+                    }
+                    ul{
+                        margin: 0;
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        li{
+                            list-style-type: none;
+                            padding :0 20px;
+                            font-weight: 300;
+                            font-size: 1.1rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 10px;
+                            width: max-content;
+                            padding-bottom: 5px;
+                            transition: 500ms all ease;
+                            &:hover{
+                                border-bottom: 1px solid #9A9A9A;
+                            }
+                            @include tablet {
+                                .userName{
+                                    display: none;
+                                }
+                            }
+                            .imageContainer{    
+                                width: 48px;
+                                height: 48px;
+                                img{
+                                    width: 100%;
+                                    object-fit: cover;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

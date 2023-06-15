@@ -1,0 +1,93 @@
+@import "../../index.scss";
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap');
+.dark {
+    color: $mainBackgroundColor-Contain-Wrapper!important;
+    .FeedBack{
+        background-color:  $mainBackgroundColor-Contain-dark;
+    
+        .shareSection{
+            background-color: $mainBackgroundColor-Contain-Wrapper-dark!important;
+        }
+        .btn-post{
+            border: 1px solid $mainBackgroundColor-Contain!important;
+            color: $mainBackgroundColor-Contain!important;
+        }
+        .PostMainContainer{
+            background-color: $mainBackgroundColor-Contain-dark!important;
+            .postSection{
+                background-color: $mainBackgroundColor-Contain-Wrapper-dark;
+                box-shadow: 0px 0px 5px #333;
+                .PostText{
+                    color : $mainBackgroundColor-Contain!important
+                }
+            }
+        }
+    }
+}
+
+.FeedBack{
+    background-color: $mainBackgroundColor-Contain; 
+    flex:7;
+    @include tablet{
+        flex : 9;
+    }
+    .FeedWrapper{
+        margin: 1%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-direction: column;
+        .shareSection{
+
+            width: 70%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: $mainBackgroundColor-Contain-Wrapper;
+            @include tablet{
+                width: 90%;
+            }
+            .TopSection{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .image{
+                    width: 64px;
+                    height: 64px;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+                .inputSection{
+                    width: 90%;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .btn-post{
+                        width: 90%;
+                        background-color: inherit;
+                        border: 1px solid $mainTextColor-container;
+                        border-radius: 20px;
+                        padding: 10px;
+                        cursor: pointer;
+                        text-align: start;
+                        font-size: .9rem;
+                        font-weight: 400;
+                    }
+                } 
+            }
+        }
+        .PostMainContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: $mainBackgroundColor-Contain;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+    }
+}
